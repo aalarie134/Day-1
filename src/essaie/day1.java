@@ -9,14 +9,23 @@ public class day1 {
         File file = new File("input.txt");
 
         Scanner scan = new Scanner(file);
-        int max = (int) file.length();
-        System.out.println(max);
+        long max =  1999;
+//        System.out.println(max);
         int temp = scan.nextInt();
-        System.out.println(temp);
-        for(int i = 0 ; i < max ; i++){
-                //to do
+
+        for(int i = 1 ; i < max + 1 ; i++){
+            int a = temp;
+            int b = scan.nextInt();
+//            System.out.println(" a  =" + a + " b = " + b + " i = " + i + "  ");
+            if( comparator.compare(a,b) ){
+                System.out.println("true");
+                answer++;
+            }
+
+            temp = b;
         }
 
+        System.out.println(answer);
 
 
 
